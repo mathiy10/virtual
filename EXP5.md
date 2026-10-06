@@ -82,6 +82,16 @@ grep "[^#]" /etc/libvirt/libvirtd.conf
 ls -l /etc/libvirt/libvirt.conf | grep "\*"
 ps -ef | grep libvirtd
 virsh
+
+5(a) KVM Installation - Minimal Commands cirros 0.5.1 x86 64 disk img
+
+wget https://download.cirros-cloud.net/0.5.1/cirros-0.5.1-x86_64-disk.img
+
+sudo apt install qemu-kvm libvirt-bin bridge-utils virt-manager qemu-system sudo systemctl restart libvirtd
+
+virsh list
+
+sudo virt-manager
 ```
 
 Inside `virsh`:
